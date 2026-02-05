@@ -25,7 +25,7 @@ int main() {
 		}
 	}
 
-	while (q--) {
+	while (q--) { // time : O(q)
 		int l1, r1, l2, r2;
 		cin >> l1 >> r1 >> l2 >> r2;
 		int ans = psum[l2][r2];
@@ -34,6 +34,9 @@ int main() {
 		if (l1 > 0 and r1 > 0) ans += psum[l1 - 1][r1 - 1];
 		cout << ans << endl;
 	}
+
+	// total time : O(mn + q)
+	// space : O(mn) due psum[][]
 
 
 	return 0;
